@@ -1,0 +1,32 @@
+{
+    "name": "samples",
+    "version": "0.0.0",
+    "description": "samples",
+    "scripts": {
+        "test": "karma start",
+        "start": "php -S localhost:8085 & open http://localhost:8000/src/default.html"
+    },
+    "author": "",
+    "license": "UNLICENSED",
+    "engines" : {
+
+        "node" : ">=6.9.5"
+    },
+    "dependencies": {
+
+    },
+    "devDependencies": {
+
+        "jasmine-core": "^2.5.2",
+        "karma": "^1.4.1",
+        "karma-cli": "^1.0.1",
+        "karma-jasmine": "^1.1.0",
+        "karma-chrome-launcher": "^2.0.0",
+        "karma-firefox-launcher": "^1.0.0",
+        "karma-phantomjs-launcher": "^1.0.2",
+        "karma-ng-html2js-preprocessor": "^1.0.0",
+        "karma-ng-json2js-preprocessor": "^2.0.1",
+
+        "phantomjs-prebuilt": "^2.1.14"
+    }
+}
