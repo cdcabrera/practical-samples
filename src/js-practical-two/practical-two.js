@@ -1,18 +1,21 @@
 
     function remoteMathService (cb) {
 
-        var  one;
-        var  two;
-    
-        callOneService( function (err, num) {
+        var one;
+        var two;
+
+        // og issue, simple sequence order
+        callOneService(function (err, num) {
+
             one = num;
-        });
 
-        callTwoService( function (err, num) {
-            two = num;
-        });
+            callTwoService(function (err, num) {
 
-        return  cb( undefined , one  +  two);
+                two = num;
+
+                cb(undefined, one + two);
+            });
+        });
     }
 
 
