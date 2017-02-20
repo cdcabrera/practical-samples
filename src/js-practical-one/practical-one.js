@@ -10,12 +10,19 @@
     function foo (callback) {
 
         doThing( function (err, res) {
-            if (err) callback(err);
-            callback( null, res);
+            // og issue, didn't prevent callback from firing twice...
+            if (err) {
+
+                callback(err);
+
+            } else {
+
+                callback(null, res);
+            }
         });
     }
 
     foo( function (err, res){
 
-        console .log ( 'Done!. err=', err, ' : res = ', res );
+        console.log( 'Done!. err=', err, ' : res = ', res );
     });
