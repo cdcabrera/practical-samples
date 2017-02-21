@@ -15,8 +15,112 @@
     </head>
     <body>
 
-        <h1>JS DOM Sample</h1>
 
+        <div class="container">
+
+            <h1>JS DOM Sample</h1>
+
+            <form class="row">
+
+                <label class="col-xs-12">
+                    Character count
+
+                    <textarea name="text" maxlength="100" class="count-chars form-control" rows="5"></textarea>
+
+                    <span aria-live="polite" id="count">Remaining Chars: <span></span></span>
+                </label>
+
+            </form>
+        </div>
+
+        <script>
+
+            /**
+             * 1...
+             */
+            /*(function(window, undefined) {
+
+
+                var textArea    = window.document.querySelector('.count-chars'),
+                    countLabel  = window.document.getElementById('count'),
+                    countSpan   = countLabel.querySelector('span'),
+                    maxLength   = parseInt(textArea.getAttribute('maxlength'));
+
+                var keyEvent = function(event) {
+
+                    var text = event.target.value;
+
+                    countSpan.innerText = maxLength - text.length;
+                };
+
+                textArea.addEventListener('keydown', keyEvent, false);
+                textArea.addEventListener('keyup', keyEvent, false);
+
+                countSpan.innerText = maxLength;
+
+            })(this);*/
+
+
+            /**
+             * 2...
+             */
+            (function(window, undefined) {
+
+                var textArea    = window.document.querySelector('.count-chars'),
+                    countLabel  = window.document.getElementById('count'),
+                    countSpan   = countLabel.querySelector('span'),
+                    maxLength   = parseInt(textArea.getAttribute('maxlength')),
+                    alertClass  = 'text-danger';
+
+
+                go();
+
+
+                /**
+                 * Start everything
+                 */
+                function go() {
+
+                    textArea.addEventListener('keydown', keyEvent, false);
+                    textArea.addEventListener('keyup', keyEvent, false);
+
+                    countSpan.innerText = maxLength;
+
+                    updateClass();
+                }
+
+
+                /**
+                 * Key event
+                 */
+                function keyEvent(event) {
+
+                    var text = event.target.value;
+
+                    countSpan.innerText = maxLength - text.length;
+
+                    updateClass(text.length);
+                }
+
+
+                /**
+                 * Update CSS class
+                 */
+                function updateClass(textLength) {
+
+                    if (!textLength || textLength <= 5) {
+
+                        countLabel.className = alertClass;
+
+                    } else {
+
+                        countLabel.className = countLabel.className.replace(alertClass,'');
+                    }
+                }
+
+            })(this);
+
+        </script>
 
     </body>
 </html>
