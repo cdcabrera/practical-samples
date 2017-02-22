@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <title>Practical</title>
+
+        <meta name="keywords" content="practical" />
+        <meta name="description" content="practical" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+
+        <style>
+
+            * { box-sizing:border-box; }
+
+            body {
+
+                background-color:#f6f6f6;
+                background-image:radial-gradient(#bbbbbb 5%, transparent 0%);
+                background-size:30px 30px;
+            }
+
+            .open-shift {
+
+                font-family: 'Open Sans', sans-serif;
+                font-size:0.8em;
+                color:#333;
+
+                position:relative;
+                display:block;
+
+                top:200px;
+                width:16%;
+                height:156px;
+                margin:0 auto 0 30%;
+
+                background-color:#fff;
+                box-shadow:0 0 5px #bebebe;
+            }
+
+            .open-shift > div:first-child {
+
+                color:#fff;
+
+                margin:0;
+                padding:16px 10px;
+
+                background-color: #cc0000;
+                box-shadow:2px 2px 5px #bebebe;
+
+                white-space:nowrap;
+            }
+
+            .open-shift div > span {
+
+                display:inline-block;
+                padding:3px 6px;
+
+                vertical-align:middle;
+            }
+
+            .open-shift div > span:first-child {
+
+                width:80%;
+            }
+
+            .open-shift div > span:last-child {
+
+                text-align:center;
+
+                width:20%;
+
+                background-color:#6f0000;
+            }
+
+            @media only screen and (max-width: 60em) {
+
+                .open-shift {
+
+                    display:none;
+                }
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div class="open-shift">
+            <div>
+                <span>OpenShift</span>
+                <span>4</span>
+            </div>
+        </div>
+
+    </body>
+</html>
