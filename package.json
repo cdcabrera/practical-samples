@@ -3,8 +3,9 @@
     "version": "0.0.0",
     "description": "samples",
     "scripts": {
+        "postinstall": "bower install",
         "test": "karma start",
-        "start": "php -S localhost:8085 & open http://localhost:8000/src/default.html"
+        "start": "gulp serve"
     },
     "author": "",
     "license": "UNLICENSED",
@@ -16,6 +17,16 @@
 
     },
     "devDependencies": {
+
+        "browser-sync": "^2.18.8",
+
+        "del": "~2.2.2",
+        "gulp": "~3.9.1",
+        "gulp-less": "~3.3.0",
+        "jshint": "^2.9.4",
+        "gulp-jshint": "^2.0.4",
+        "gulp-uglify": "^2.0.1",
+        "gulp-usemin": "^0.3.28",
 
         "jasmine-core": "^2.5.2",
         "karma": "^1.4.1",
