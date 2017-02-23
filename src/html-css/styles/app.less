@@ -1,0 +1,43 @@
+
+@import 'colors';
+
+body.html-css {
+
+    font-family: 'Open Sans', sans-serif;
+    background-color:@color-mainBackGround;
+    background-image:radial-gradient(@color-mainDot 5%, transparent 0%);
+    background-size:30px 30px;
+
+    .row > div {
+
+        top:200px;
+        height:156px;
+        background-color:#fff;
+        box-shadow:0 0 5px @color-dropShadow;
+
+        > div:first-child {
+
+            margin:0;
+            padding:8px;
+            background-color:@color-boxBackGround;
+            color:@color-boxHeaderFont;
+            box-shadow: 2px 2px 5px @color-dropShadow;
+            white-space:nowrap;
+
+
+            > span + span {
+
+                display:inline-block;
+                padding:3px 6px;
+                background-color:@color-boxSubBackGround;
+                vertical-align:middle;
+                text-align:center;
+            }
+        }
+    }
+
+    .no-padding {
+
+        padding:0;
+    }
+}
