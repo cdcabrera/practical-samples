@@ -2,7 +2,7 @@
 #Practical Samples
 
 
-##How to Install, Serve, Test, &amp; Build
+##How to Install, Serve, Test
 
 ###Setup your environment
 
