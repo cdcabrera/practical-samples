@@ -43,7 +43,7 @@
                 box-shadow:0 0 5px #bebebe;
             }
 
-            .open-shift > div:first-child {
+            .open-shift-header {
 
                 color:#fff;
 
@@ -56,20 +56,22 @@
                 white-space:nowrap;
             }
 
-            .open-shift div > span {
+            .open-shift-header > span {
 
                 display:inline-block;
                 padding:3px 6px;
 
                 vertical-align:middle;
+
+                overflow:hidden;
             }
 
-            .open-shift div > span:first-child {
+            .open-shift-header > span:first-child {
 
                 width:80%;
             }
 
-            .open-shift div > span:last-child {
+            .open-shift-header > span:last-child {
 
                 text-align:center;
 
@@ -78,11 +80,10 @@
                 background-color:#6f0000;
             }
 
-            @media only screen and (max-width: 47em) {
+            @media only screen and (max-width: 47.9em) {
 
                 .open-shift {
 
-                    display:block;
                     width:auto;
                     margin:0;
                 }
@@ -102,7 +103,7 @@
     <body>
 
         <div class="open-shift">
-            <div>
+            <div class="open-shift-header">
                 <span>OpenShift</span>
                 <span>4</span>
             </div>
