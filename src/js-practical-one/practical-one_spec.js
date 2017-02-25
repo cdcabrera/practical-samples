@@ -1,7 +1,7 @@
 
 describe('Issue Callback' , function(){
 
-    it ('should only fire callback once', function(done) {
+    it ('should only fire callback once', function() {
 
         var testVal = 0;
 
@@ -11,8 +11,6 @@ describe('Issue Callback' , function(){
 
             expect(testVal).toEqual(1);
         });
-
-        done();
 
     });
 
