@@ -66,11 +66,12 @@
              */
             (function(window, undefined) {
 
-                var textArea    = window.document.querySelector('.count-chars'),
-                    countLabel  = window.document.getElementById('count'),
-                    countSpan   = countLabel.querySelector('span'),
-                    maxLength   = parseInt(textArea.getAttribute('maxlength')),
-                    alertClass  = 'text-danger';
+                var textArea        = window.document.querySelector('.count-chars'),
+                    countLabel      = window.document.getElementById('count'),
+                    countSpan       = countLabel.querySelector('span'),
+                    maxLength       = parseInt(textArea.getAttribute('maxlength')),
+                    charLengthAlert = maxLength - 5,
+                    alertClass      = 'text-danger';
 
 
                 go();
@@ -108,7 +109,7 @@
                  */
                 function updateClass(textLength) {
 
-                    if (!textLength || textLength <= 5) {
+                    if (textLength >= charLengthAlert) {
 
                         countLabel.className = alertClass;
 
