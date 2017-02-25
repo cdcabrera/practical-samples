@@ -4,7 +4,8 @@
         less            = require('gulp-less'),
         uglify          = require('gulp-uglify'),
         jshint          = require('gulp-jshint'),
-        usemin          = require('gulp-usemin');
+        usemin          = require('gulp-usemin'),
+        karma           = require('karma').Server;
 
 
     var settings = {
@@ -92,6 +93,20 @@
 
 
     /**
+     * Run unit test
+     */
+    gulp.task('unit-test', function (done) {
+
+        new karma({
+
+            configFile: __dirname + '/karma.conf.js',
+            singleRun: true
+
+        }, done).start();
+    });
+
+
+    /**
      * Serve files
      */
     gulp.task('serve', ['less'], function () {
@@ -106,7 +121,7 @@
 
         gulp.watch(settings.lessMatch, ['less']);
 
-        gulp.watch(settings.jsMatch, ['js-hint']);
+        gulp.watch(settings.jsMatch, ['js-hint', 'unit-test']);
 
         gulp.watch([settings.servePath+'/**/*']).on('change', browserSync.reload);
     });
